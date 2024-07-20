@@ -1,4 +1,3 @@
-import React from "react";
 import { useToast } from "../../components/ui/use-toast";
 import Loader from "../../components/shared/Loader";
 import UserCard from "../../components/shared/UserCard";

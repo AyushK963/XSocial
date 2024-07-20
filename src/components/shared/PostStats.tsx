@@ -15,8 +15,8 @@ const PostStats = ({ post, userId }: PostStatsProps) => {
     const likesList = post?.likes?.map((user: Models.Document) => user.$id) || [];
 
     const { mutate: likePost } = useLikePost();
-    const { mutate: savePost, isPending: isSavingPost } = useSavePost();
-    const { mutate: deleteSavedPost, isPending: isDeletingSaved } = useDeleteSavedPost();
+    const { mutate: savePost, isLoading: isSavingPost } = useSavePost();
+    const { mutate: deleteSavedPost, isLoading: isDeletingSaved } = useDeleteSavedPost();
     
     const [likes, setLikes] = useState<string[]>(likesList);
     const [isSaved, setIsSaved] = useState<boolean>(false);

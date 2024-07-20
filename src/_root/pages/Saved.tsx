@@ -2,7 +2,6 @@ import { Models } from "appwrite";
 import Loader from "../../components/shared/Loader";
 import { useGetCurrentUser } from "@/lib/react-query/query";
 import GridPostList from "../../components/shared/GridPostList";
-import React from "react";
 
 const Saved = () => {
   const { data: currentUser } = useGetCurrentUser();

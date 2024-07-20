@@ -5,7 +5,6 @@ import { useUserContext } from "../../context/AuthContext";
 import { useGetUSerById } from "@/lib/react-query/query";
 import GridPostList  from "../../components/shared/GridPostList";
 import Loader from "../../components/shared/Loader";
-import React from "react";
 
 
 interface StabBlockProps {

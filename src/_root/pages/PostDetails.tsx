@@ -8,7 +8,7 @@ import { Link, useParams } from "react-router-dom";
 
 const PostDetails = () => {
   const { id } = useParams();
-  const { data: post, isPending } = useGetPostById(id || '');
+  const { data: post, isLoading } = useGetPostById(id || '');
 
   const { user } = useUserContext();
 
@@ -17,7 +17,7 @@ const PostDetails = () => {
   };
 
   // Render loading spinner if post is pending
-  if (isPending) {
+  if (isLoading) {
     return <Loader />;
   }
 

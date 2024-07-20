@@ -1,6 +1,6 @@
 import * as z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
-import {Form,FormControl,FormDescription,FormField,FormItem,FormLabel,FormMessage,} from "@/components/ui/form"
+import {Form,FormControl,FormField,FormItem,FormLabel,FormMessage,} from "@/components/ui/form"
 import { Link, useNavigate } from "react-router-dom"
 
 import { useToast } from "@/components/ui/use-toast"
@@ -8,11 +8,10 @@ import { Input } from "@/components/ui/input"
 import { useForm } from "react-hook-form"
 import { SignUpValidation } from "@/lib/validation"
 import { Button } from "@/components/ui/button"
-// import Loader from "@/components/shared/Loader"
 
-import { createUserAccount } from "@/lib/appwrite/api"
+// import { createUserAccount } from "@/lib/appwrite/api"
 import { useCreateUserAccount, useSignInAccount } from "@/lib/react-query/query"
-import { Session } from "inspector"
+// import { Session } from "inspector"
 import { useUserContext } from "@/context/AuthContext"
 import Loader from "@/components/shared/Loader"
 
@@ -22,12 +21,12 @@ const SignupForm = () => {
   const { toast } = useToast();
   // const isLoading =false;
 
-  const {checkAuthUser,isLoading:isUserLoading} = useUserContext();
+  const {checkAuthUser,/*isLoading:isUserLoading*/} = useUserContext();
   const navigate= useNavigate();
 
   const {mutateAsync:createUserAccount ,isLoading:isCreatingUser }= useCreateUserAccount();
 
-  const {mutateAsync:signInAccount ,isLoading:isSigningIn }= useSignInAccount();
+  const {mutateAsync:signInAccount ,/*isLoading:isSigningIn8*/ }= useSignInAccount();
 
   
 
